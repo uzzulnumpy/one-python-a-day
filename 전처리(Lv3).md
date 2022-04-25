@@ -15,9 +15,9 @@
 
 > IQR이란, Interquartile range의 약자로써 Q3 - Q1를 의미한다.
 >
->  Q3 - Q1: 사분위수의 상위 75% 지점의 값과 하위 25% 지점의 값 차이
+> Q3 - Q1: 사분위수의 상위 75% 지점의 값과 하위 25% 지점의 값 차이
 
-![img](%EC%A0%84%EC%B2%98%EB%A6%AC-%20%EC%9D%B4%EC%83%81%EC%B9%98.assets/img-16507279048902.png)
+![img](%EC%A0%84%EC%B2%98%EB%A6%AC(Lv3).assets/img-16508985826691.png)
 
 Q1 -  1.5 * IQR : 최소 제한선, Q3 + 1.5 * IQR :최대 제한선
 
@@ -107,7 +107,7 @@ train_data_robustScaled = robustScaler.transform(train_data)
 
 - 공식 : 
 
-![image-20220425205122523](%EC%A0%84%EC%B2%98%EB%A6%AC-%20%EC%9D%B4%EC%83%81%EC%B9%98.assets/image-20220425205122523-16508874838011.png)
+![image-20220425205122523](%EC%A0%84%EC%B2%98%EB%A6%AC(Lv3).assets/image-20220425205122523-16508986033022.png)
 
 
 
