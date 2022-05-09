@@ -8,7 +8,7 @@ Bayesian Optimization 을 이용해 모델을 튜닝
 
 ## XGBoost 모델 튜닝
 
-<img src="C:\Users\user\Downloads\다운로드.jpg" alt="다운로드" style="zoom: 67%;" />
+<img src="튜닝(Lv4).assets/다운로드.jpg" alt="다운로드" style="zoom: 67%;" />
 
 ### learning rate(학습률)
 
@@ -24,23 +24,23 @@ Bayesian Optimization 을 이용해 모델을 튜닝
 
   - 경사하강법은 **함수의 기울기(=gradient)를 이용해서 함수의 최소값 일 때의 x값을 찾기 위한 방법**이다. 기울기가 양수인 경우는 *x* 값이 증가할수록 함수 값도 증가하고, 반대로 음수인 경우에는 *x* 값이 증가할수록 함수 값이 감소한다. 그리고 기울기 값이 크다, 기울기가 가파르다는 것은 최소값으로부터 거리가 멀다는 뜻이다.
 
-    ![image-20220502230520657](Bayesian Optimization 을 이용해 모델을 튜닝.assets/image-20220502230520657.png)
+    ![image-20220502230520657](튜닝(Lv4).assets/image-20220502230520657.png)
 
     기울기가 양수면 x를 음의 방향으로, 기울기가 음수면 x를 양의 방향으로 x를 이동시킨다.
 
-    ![image-20220502230748658](Bayesian Optimization 을 이용해 모델을 튜닝.assets/image-20220502230748658.png)
+    ![image-20220502230748658](튜닝(Lv4).assets/image-20220502230748658.png)
 
     미분 계수(=기울기=gradient)는 극소값에 가까워질수록 값이 작아진다. 따라서, **이동거리에는 미분 계수와 비례하는 값을 이용**한다. 그럼 극소값에서 멀 때는 많이 이동하고, 극소값에 가까울 때는 조금씩 이동할 수 있다.
 
-    ![image-20220502230822164](Bayesian Optimization 을 이용해 모델을 튜닝.assets/image-20220502230822164.png)
+    ![image-20220502230822164](튜닝(Lv4).assets/image-20220502230822164.png)
 
-    > ![image-20220502230848119](Bayesian Optimization 을 이용해 모델을 튜닝.assets/image-20220502230848119.png)
+    > ![image-20220502230848119](튜닝(Lv4).assets/image-20220502230848119.png)
 
     
 
 - 경사하강법 알고리즘은 기울기에 learning rate 또는 step size라고 불리는 스칼라를 곱해서 다음지점을 결정한다.
 
-  <img src="Bayesian Optimization 을 이용해 모델을 튜닝.assets/image-20220502193613401.png" alt="image-20220502193613401" style="zoom:67%;" />
+  ![image-20220502193613401](튜닝(Lv4).assets/image-20220502193613401.png)
 
 learning rate(step size)이 크면 데이터가 무질서하게 이탈해서 최저점에 수렴하지 못하고 learning rate(step size)가 작으면 학습시간이 오래걸려서 최저점에 도달하지 못한다. 적절할 값을 설정해줘야한다. [최종 학습시에는 0.05 이하의 값을 사용하여 모형 성능 향상에 초점을 맞추고, 하이퍼파라미터 튜닝시에는 0.1이상의 값을 사용하여 학습속도를 높이는 것이 좋다.](https://psystat.tistory.com/131)
 
@@ -58,13 +58,13 @@ learning rate(step size)이 크면 데이터가 무질서하게 이탈해서 최
 - L2 Regularization은 가중치 업데이트 시, 가중치의 크기가 직접적인 영향을 미침
 - 다만, L1 Regularization은 아래 그림처럼 미분 불가능한 점이 있기 때문에 Gradient-base learning 에는 주의가 필요
 
-<img src="Bayesian Optimization 을 이용해 모델을 튜닝.assets/다운로드.png" alt="다운로드" style="zoom:67%;" />
-
 - 따라서, L2는 L1 보다 가중치 규제에 좀 더 효과적
+
+<img src="튜닝(Lv4).assets/다운로드.png" alt="다운로드" style="zoom:67%;" />
 
 ## Light GBM 모델 튜닝
 
-<img src="C:\Users\user\Downloads\다운로드 (1).jpg" alt="다운로드 (1)" style="zoom:67%;" />
+![다운로드 (1)](튜닝(Lv4).assets/다운로드 (1).jpg)
 
 **min_child_samples**
 
