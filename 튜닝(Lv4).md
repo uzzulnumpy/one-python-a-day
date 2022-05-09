@@ -64,7 +64,7 @@ learning rate(step size)이 크면 데이터가 무질서하게 이탈해서 최
 
 ## Light GBM 모델 튜닝
 
-![다운로드 (1)](튜닝(Lv4).assets/다운로드 (1).jpg)
+<img src="튜닝(Lv4).assets/다운로드 (1).jpg" alt="다운로드 (1)" style="zoom: 67%;" />
 
 **min_child_samples**
 
